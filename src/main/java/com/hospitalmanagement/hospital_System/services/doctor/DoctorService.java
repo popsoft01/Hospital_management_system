@@ -1,4 +1,4 @@
-package com.hospitalmanagement.hospital_System.services;
+package com.hospitalmanagement.hospital_System.services.doctor;
 
 import com.hospitalmanagement.hospital_System.entity.Doctor;
 
