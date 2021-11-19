@@ -18,4 +18,7 @@ public class Appointment {
     private String phoneNumber;
     private String email;
     private LocalDateTime appointmentTime;
+
+
+    private Doctor doctor;
 }

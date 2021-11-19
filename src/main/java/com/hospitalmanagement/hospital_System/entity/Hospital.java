@@ -3,6 +3,7 @@ package com.hospitalmanagement.hospital_System.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -14,5 +15,8 @@ public class Hospital {
     private String name;
     private String hospitalAddress;
     private String hospitalType;
+
+    @ManyToOne
+    private List<Doctor> doctors ;
     
 }
