@@ -9,9 +9,9 @@ import java.util.Optional;
 
 public interface MedicineService {
     List<Medicine> getAllMedicine();
-    Optional<Patient> getMedicine(Long id);
+    Optional<Medicine> getMedicine(Long id);
     void addMedicine(Medicine medicine);
     void deleteMedicine(Medicine medicine);
-    Doctor editMedicine(Medicine medicine);
-    Doctor searchMedicine(String name);
+    Medicine editMedicine(Medicine medicine, Long id);
+    Medicine searchMedicine(String name);
 }
