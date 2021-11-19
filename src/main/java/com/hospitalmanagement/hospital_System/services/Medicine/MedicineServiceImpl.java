@@ -39,6 +39,6 @@ public class MedicineServiceImpl implements MedicineService{
 
     @Override
     public Medicine searchMedicine(String name) {
-        return null;
+        return medicineRespository.findMedicineByName(name);
     }
 }

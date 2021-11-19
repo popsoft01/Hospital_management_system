@@ -2,9 +2,7 @@ package com.hospitalmanagement.hospital_System.entity;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -13,6 +11,8 @@ import java.time.LocalDateTime;
 @Table
 public class Appointment {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long appointmentId;
     private String name;
     private String phoneNumber;
