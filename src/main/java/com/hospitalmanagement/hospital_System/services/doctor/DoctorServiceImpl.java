@@ -11,6 +11,7 @@ import java.util.Optional;
 
 @Service
 public class DoctorServiceImpl implements DoctorService{
+
     @Autowired
     private DoctorRepository doctorRepository;
 
@@ -35,7 +36,7 @@ public class DoctorServiceImpl implements DoctorService{
     }
 
     @Override
-    public Doctor editDoctor(Doctor doctor) {
+    public Doctor editDoctor(Doctor doctor,long id) {
         return doctorRepository.save(doctor);
     }
 
