@@ -13,12 +13,12 @@ public class NurseController {
     @Autowired
     private NurseServiceImpl nurseService;
 
-    @GetMapping("/doctor")
+    @GetMapping("/")
     public List<Nurse> showAllDoctor(){
         return nurseService.getAllNurse();
     }
 
-    @PostMapping("/doctor")
+    @PostMapping("/")
     public void addNurse(@RequestBody Nurse nurse){
         nurseService.addNurse(nurse);
     }
@@ -28,11 +28,11 @@ public class NurseController {
         return nurseService.getNurse(id).get();
     }
 
-    @PutMapping("/doctor/{id}")
+    @PutMapping("/nurse/{id}")
     public Nurse editNurse(@RequestBody Nurse nurse, @PathVariable("id") Long id){
         return nurseService.editNurse(nurse, id);
     }
-    @GetMapping("/seacrh")
+    @GetMapping("/seacrh/nurse")
     public Nurse searchNurse(String name){
         return  nurseService.searchNurse(name);
     }
