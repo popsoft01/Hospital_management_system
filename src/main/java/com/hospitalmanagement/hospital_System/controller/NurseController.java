@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/nurse")
@@ -25,8 +26,8 @@ public class NurseController {
     }
 
     @GetMapping("/{id}")
-    public Nurse getNurse(@PathVariable long id){
-        return nurseService.getNurse(id).get();
+    public Optional<Nurse> getNurse(@PathVariable long id){
+        return nurseService.getNurse(id);
     }
 
     @PutMapping("/nurse/{id}")
