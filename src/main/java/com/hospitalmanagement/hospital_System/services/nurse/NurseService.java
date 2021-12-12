@@ -11,6 +11,6 @@ public interface NurseService {
     Optional<Nurse> getNurse(Long id);
     void addNurse(Nurse nurse);
     void deleteNurse(Nurse nurse);
-    Nurse editNurse(Nurse nurse);
+    Nurse editNurse(Nurse nurse, Long id);
     Nurse searchNurse(String name);
 }
