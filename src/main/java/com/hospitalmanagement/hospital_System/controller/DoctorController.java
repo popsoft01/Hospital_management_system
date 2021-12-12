@@ -26,6 +26,7 @@ public class DoctorController {
     public Doctor getDoctor(@PathVariable long id){
         return doctorService.getDoctor(id).get();
     }
+
     @PutMapping("/doctor/{id}")
     public Doctor editDoctor(@RequestBody Doctor doctor, @PathVariable("id") Long id){
         return doctorService.editDoctor(doctor, id);
