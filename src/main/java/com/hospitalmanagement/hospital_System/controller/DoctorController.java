@@ -23,5 +23,9 @@ public class DoctorController {
     public void addDoctor(@RequestBody Doctor doctor){
         doctorService.addDoctor(doctor);
     }
+    @GetMapping("/{id}")
+    public Doctor getDoctor(@PathVariable long id){
+        return doctorService.getDoctor(id).get();
+    }
 
 }
