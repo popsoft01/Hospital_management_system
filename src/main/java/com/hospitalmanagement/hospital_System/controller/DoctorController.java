@@ -31,6 +31,10 @@ public class DoctorController {
     public Doctor editDoctor(@RequestBody Doctor doctor, @PathVariable("id") Long id){
         return doctorService.editDoctor(doctor, id);
     }
+    @GetMapping("/seacrh")
+    public Doctor searchDoctor(String name){
+        return  doctorService.searchDoctor(name);
+    }
 
 
 }
