@@ -34,7 +34,7 @@ public class NurseServiceImpl implements NurseService{
     }
 
     @Override
-    public Nurse editNurse(Nurse nurse) {
+    public Nurse editNurse(Nurse nurse, Long id) {
         return nurseRepository.save(nurse);
     }
 
